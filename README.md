@@ -1,7 +1,8 @@
-Welcome to the Glitch Template
+Welcome to Weathertop 2 release 3
 ==============================
 
-A starter project for learning Glitch.
+Now member stations are organised alphabetically and users can delete stations and readings, which are now time stamped.
 
-This is an Express.js project, designed to work well with the Glitch development environment. It includes basic express setup, templating, routing, JSON based model and session support.
+There is new trend analytics for temp, wind, and 
 
+Use the new profile page to change personal details, such as name, email, and password.
