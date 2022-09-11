@@ -11,6 +11,8 @@ const stationAnalytics = {
     station.latestReading.weatherIcon = metricConversion.weatherIcon(station.latestReading.code);
     station.latestReading.tempFar = metricConversion.tempFar(station.latestReading.temp);
     station.latestReading.beaufourt = metricConversion.beaufourtScale(station.latestReading.windSpeed);
+    station.latestReading.windCompass = metricConversion.windDirCalc(station.latestReading.windDir);
+    station.latestReading.windChill = stationAnalytics.windChill(station.latestReading);
 
     station.maxTemp = stationAnalytics.maxTemp(station.readings);
     station.minTemp = stationAnalytics.minTemp(station.readings);

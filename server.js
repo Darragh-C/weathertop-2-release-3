@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const exphbs = require("express-handlebars");
+const path = require('node:path');
 
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(fileUpload());
+app.use("/images", express.static(path.join(__dirname, "/public/images")));
 
 const hbs = exphbs.create({
   extname: ".hbs",
@@ -40,6 +42,6 @@ app.set("view engine", ".hbs");
 const routes = require("./routes");
 app.use("/", routes);
 
-const listener = app.listen(process.env.PORT || 9000, function() {
-  logger.info(`glitch-template-1 started on port ${listener.address().port}`);
+const listener = app.listen(process.env.PORT || 9009, function() {
+  logger.info(`weathertop-2-release-3 started on port ${listener.address().port}`);
 });

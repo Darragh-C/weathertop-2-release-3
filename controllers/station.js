@@ -29,6 +29,7 @@ const station = {
       code: request.body.code,
       temp: request.body.temp,
       windSpeed: request.body.windSpeed,
+      windDir: request.body.windDir,
       pressure: request.body.pressure,
       date: metricConversion.formatDate(new Date()),
     }

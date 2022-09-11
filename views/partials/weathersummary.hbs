@@ -1,77 +1,105 @@
-<div class="ui centered equal width grid">
-  <div class="row">
-    <div class="column">
-      <div class="ui segment">
-        <h3>{{stationName}}</h3>
-        <i class="huge map marker icon"></i>
-        <br>
-        Latitude: {{latitude}}
-        <br>
-        Longitude: {{longitude}}
+{{#if readings}}
+  <div class="ui centered equal width grid">
+    <div class="row">
+      <div class="column">
+        <div class="ui segment">
+          <h3>{{stationName}}</h3>
+          <i class="huge map marker icon"></i>
+          <br>
+          <br>
+          Latitude: {{latitude}}
+          <br>
+          Longitude: {{longitude}}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h3>Weather</h3>
-        <i class="huge blue right floated {{latestReading.weatherIcon}} icon"></i>
-        <br>
-        {{latestReading.weather}}
+      <div class="column">
+        <div class="ui segment">
+          <h3>Weather</h3>
+          <i class="huge blue right floated {{latestReading.weatherIcon}} icon"></i>
+          <br>
+          <br>
+          {{latestReading.weather}}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h3>Temp</h3>
-        <i class="huge grey temperature low icon"></i>
-        {{#ifEq tempTrend 1}}
-          <i class="huge right floated green arrow up icon"></i>
-        {{else ifEq tempTrend -1}}
-          <i class="huge red arrow down icon"></i>
-        {{/ifEq}}
-        <br>
-        {{latestReading.temp}} C or {{latestReading.tempFar}} F
-        <br>
-        Max: {{maxTemp}}
-        <br>
-        Min: {{minTemp}}
+      <div class="column">
+        <div class="ui segment">
+          <h3>Temp</h3>
+          <i class="huge grey temperature low icon"></i>
+          {{#ifEq tempTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq tempTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          <br>
+          {{latestReading.temp}} C or {{latestReading.tempFar}} F
+          <br>
+          Max: {{maxTemp}}
+          <br>
+          Min: {{minTemp}}
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h3>Wind speed</h3>
-        <i class="huge grey wind icon"></i>
-        {{#ifEq windTrend 1}}
-          <i class="huge right floated green arrow up icon"></i>
-        {{else ifEq windTrend -1}}
-          <i class="huge red arrow down icon"></i>
-        {{/ifEq}}
-        <br>
-        {{latestReading.beaufourt}} Bft
-        <br>
-        Max: {{maxWind}}
-        <br>
-        Min: {{minWind}}
-        <br>
-        Wind direction: {{latestReading.windDir}}
-        <br>
-        Feels like: {{latestReading.windChill}}
+      <div class="column">
+        <div class="ui segment">
+          <h3>Wind speed</h3>
+          <i class="huge grey wind icon"></i>
+          {{#ifEq windTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq windTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          <br>
+          {{latestReading.beaufourt}} Bft
+          <br>
+          Max: {{maxWind}}
+          <br>
+          Min: {{minWind}}
+          <br>
+          Wind direction:
+          <br>
+          {{latestReading.windCompass}}
+          <br>
+          Feels like: {{latestReading.windChill}}
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h3>Pressure</h3>
-        <i class="huge grey tachometer alternate icon"></i>
-        {{#ifEq pressureTrend 1}}
-          <i class="huge right floated green arrow up icon"></i>
-        {{else ifEq pressureTrend -1}}
-          <i class="huge red arrow down icon"></i>
-        {{/ifEq}}
-        <br>
-        {{latestReading.pressure}} hPa
-        <br>
-        Max: {{maxPressure}}
-        <br>
-        Min: {{minPressure}}
+      <div class="column">
+        <div class="ui segment">
+          <h3>Pressure</h3>
+          <i class="huge grey tachometer alternate icon"></i>
+          {{#ifEq pressureTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq pressureTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          <br>
+          {{latestReading.pressure}} hPa
+          <br>
+          Max: {{maxPressure}}
+          <br>
+          Min: {{minPressure}}
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{{/if}}

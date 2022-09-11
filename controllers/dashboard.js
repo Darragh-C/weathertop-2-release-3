@@ -26,7 +26,7 @@ const dashboard = {
       return 0;
     });
     const viewData = {
-      title: "Weathertop 2.0 Release 2 Dashboard",
+      title: "Weathertop 2.0 Release 3 Dashboard",
       stations: stations,
     };
     logger.info('about to render', stationStore.getAllStations());
